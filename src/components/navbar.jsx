@@ -2,7 +2,20 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { Icon as Iconify } from '@iconify-icon/react';
 
-const Navbar = ({ title, btnBg, menuBg, menuBgTxt, menuTxtInactive, btnTxt, menuItem, padding, iconMargin }) => {
+const Navbar = ({ title, btnBg, menuBg, menuBgTxt, menuTxtInactive, btnTxt, padding, iconMargin }) => {
+    const menuItem = [
+        {
+          title: "Dashboard",
+          iconActive: "heroicons-solid:dashboard",
+          iconInactive: "heroicons-outline:dashboard",
+        },
+        {
+          title: "Logout",
+          iconActive: "heroicons-solid:pencil",
+          iconInactive: "heroicons-outline:pencil",
+        },
+      ];
+    
     return (
         <div>
             <nav className='navbar'>
